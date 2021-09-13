@@ -8,6 +8,10 @@ void main () {
 
     vec4 color = texture2D(uTexture, vUv);
 
-    gl_FragColor = color;
+    color.r = texture2D(uTexture, vUv + uOffset).r;
+
+    
+
+    gl_FragColor = vec4(color.rgb, uAlpha);
     // gl_FragColor = vec4(1.0 , 1.0, 1.0, 1.0);
 }

@@ -7,14 +7,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "ogg", serif;
+  font-size: 1.5rem;
+  color: #131313;
 }
 
 body,
 html {
-  overscroll-behavior: none;
-  background: #000000;
-  height: 100vh;
-  width: 100%;
+  background: #dadada;
 }
 
 main {
@@ -25,37 +25,26 @@ main {
   height: 100vh;
 }
 
-.scrollable {
+ul {
   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  will-change: transform;
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  left: 10%;
+  top: 20%;
+  width: 80%;
+  height: 60%;
+  list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 
-  h1 {
-    position: absolute;
-    left: 55%;
-    top: 60%;
-    z-index: 5;
-    color: azure;
-    font-family: "Harmond", serif;
-  }
+  li {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.104);
+    cursor: pointer;
+    transition: 1s;
 
-  img {
-    position: absolute;
-    height: 60%;
-    opacity: 0;
-    visibility: hidden;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
