@@ -148,8 +148,8 @@ export default class Canvas {
     this.offset.y = lerp(this.offset.y, this.target.y, 0.1);
 
     this.uniforms.uOffset.value.set(
-      (this.target.x - this.offset.x) * 0.0005,
-      -(this.target.y - this.offset.y) * 0.0005
+      (this.target.x - this.offset.x) * 0.0009,
+      -(this.target.y - this.offset.y) * 0.0009
     );
 
     this.mesh.position.set(
